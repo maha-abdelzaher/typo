@@ -187,7 +187,7 @@
         <div class="thal-container">
             <div class="row">
                 <div class="col-sm-12 col-md-4 map-wrap">
-                    <iframe src="{data.tx_mask_thalfootermurl}" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    <iframe src="{data.tx_mask_gglmpurl}" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen=""></iframe>
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <f:if condition="{data.tx_mask_ftrleftttle}">
@@ -205,17 +205,17 @@
                     <div class="address-wrap">
 
                         <div id="c2" class="frame frame-default frame-type-text frame-layout-0">
-                            <f:if condition="{data.tx_mask_thalfootertext1}">
-                                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_thalfootertext1}</f:format.html>
+                            <f:if condition="{data.tx_mask_footerbox1}">
+                                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_footerbox1}</f:format.html>
                             </f:if>
                         </div>
 
                     </div>
-                    <f:if condition="{data.tx_mask_thalfootercl}">
-                        <f:link.typolink parameter="{data.tx_mask_thalfootercl}">
+                    <f:if condition="{data.tx_mask_contactuslink}">
+                        <f:link.typolink parameter="{data.tx_mask_contactuslink}">
                                 <button class="btn btn-default thal-btn" type="button">
-                                    <f:if condition="{data.tx_mask_thalfooterct}">
-                                        {data.tx_mask_thalfooterct}
+                                    <f:if condition="{data.tx_mask_contactustext}">
+                                        {data.tx_mask_contactustext}
                                     </f:if>
                                 </button>
                         </f:link.typolink>
@@ -223,20 +223,20 @@
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <h4>
-                        <f:if condition="{data.tx_mask_thalfooterimg2}">
-                            <f:for each="{data.tx_mask_thalfooterimg2}" as="file">
+                        <f:if condition="{data.tx_mask_ftrcntricn}">
+                            <f:for each="{data.tx_mask_ftrcntricn}" as="file">
                                 <span>
                                     <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  class="img-responsive" />
                                 </span>
                             </f:for>
                         </f:if>
-                        <f:if condition="{data.tx_mask_thalfooterh2}">
-                            <span>{data.tx_mask_thalfooterh2}</span>
+                        <f:if condition="{data.tx_mask_ftrcntrttl}">
+                            <span>{data.tx_mask_ftrcntrttl}</span>
                         </f:if>  
                     </h4>
                     <div class="date-time-block">
-                        <f:if condition="{data.tx_mask_thalfootertext2}">
-                            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_thalfootertext2}</f:format.html>
+                        <f:if condition="{data.tx_mask_footerbox2}">
+                            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_footerbox2}</f:format.html>
                         </f:if>
                     </div>
                 </div>
@@ -248,8 +248,8 @@
             <div class="col-sm-12 col-md-6">
                 <div class="pull-left">
                     <div id="c1" class="frame frame-default frame-type-text frame-layout-0 thal-footer-links">
-                        <f:if condition="{data.tx_mask_thalfootercrt}">
-                            <p>{data.tx_mask_thalfootercrt}</p>
+                        <f:if condition="{data.tx_mask_footercopyrighttext}">
+                            <p>{data.tx_mask_footercopyrighttext}</p>
                         </f:if>
                     </div>
                 </div>
@@ -257,13 +257,13 @@
             <div class="col-sm-12 col-md-6">
                 <ul class="list-inline pull-right thal-footer-links">
                     <li>
-                        <f:link.typolink parameter="{data.tx_mask_thalfooteril}">{data.tx_mask_thalfooterit}</f:link.typolink>
+                        <f:link.typolink parameter="{data.tx_mask_ftrimprntlnk}">{data.tx_mask_ftrimprntttl}</f:link.typolink>
                     </li>
                     <li>
-                        <f:link.typolink parameter="{data.tx_mask_thalfooterpl}">{data.tx_mask_thalfooterpt}</f:link.typolink>
+                        <f:link.typolink parameter="{data.tx_mask_ftrprvcylnk}">{data.tx_mask_ftrprvcyttl}</f:link.typolink>
                     </li>
                     <li>
-                        <f:link.typolink parameter="{data.tx_mask_thalfooterl3}">{data.tx_mask_thalfooterl3t}</f:link.typolink>
+                        <f:link.typolink parameter="{data.tx_mask_ftrstmplnkt}">{data.tx_mask_ftrstmpttl}</f:link.typolink>
                     </li>
                 </ul>
             </div>
@@ -277,14 +277,14 @@
         <div class="row">
             <article class="col-md-offset-1 col-md-10">
                 <section class="col-md-4">
-                    <iframe src="{data.tx_mask_stefmap}" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="{data.tx_mask_gglmpurl}" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </section><!-- Mab End -->
                 <section class="col-md-4 col-xs-6 col-xxs-12">
                     <h3><i class="fa fa-home"></i>
-                        {data.tx_mask_stefltitle}
+                        {data.tx_mask_ftrcntrttl}
                     </h3>
-                    <f:if condition="{data.tx_mask_stefleftdet}">
-                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_stefleftdet}</f:format.html>
+                    <f:if condition="{data.tx_mask_footerbox2}">
+                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_footerbox2}</f:format.html>
                     </f:if>
                     <f:link.typolink parameter="{data.tx_mask_stefleftlink}" class="btn btn-primary">
                             <f:if condition="{data.tx_mask_steflttllink}">
