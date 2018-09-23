@@ -286,24 +286,24 @@
                     <f:if condition="{data.tx_mask_footerbox2}">
                         <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_footerbox2}</f:format.html>
                     </f:if>
-                    <f:link.typolink parameter="{data.tx_mask_stefleftlink}" class="btn btn-primary">
-                            <f:if condition="{data.tx_mask_steflttllink}">
-                                {data.tx_mask_steflttllink}
+                    <f:link.typolink parameter="{data.tx_mask_contactuslink}" class="btn btn-primary">
+                            <f:if condition="{data.tx_mask_contactustext}">
+                                {data.tx_mask_contactustext}
                             </f:if>
                     </f:link.typolink>
                 </section><!-- KONTAKT End -->
                 <section class="col-md-4 col-xs-6 col-xxs-12">
                     <h3><i class="fa fa-clock-o"></i>
-                        <f:if condition="{data.tx_mask_stefrightttl}">
-                            {data.tx_mask_stefrightttl}
+                        <f:if condition="{data.tx_mask_ftrrigtttle}">
+                            {data.tx_mask_ftrrigtttle}
                         </f:if>
                     </h3>
-                    <f:if condition="{data.tx_mask_stefrightdet}">
-                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_stefrightdet}</f:format.html>
+                    <f:if condition="{data.tx_mask_footerbox3}">
+                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_footerbox3}</f:format.html>
                     </f:if>
-                    <f:link.typolink parameter="{data.tx_mask_stefrightlink}"  class="btn btn-primary">
-                            <f:if condition="{data.tx_mask_stefrightlnktitle}">
-                                {data.tx_mask_stefrightlnktitle}
+                    <f:link.typolink parameter="{data.tx_mask_cntctlnktwo}"  class="btn btn-primary">
+                            <f:if condition="{data.tx_mask_sebipntf}">
+                                {data.tx_mask_sebipntf}
                             </f:if>
                     </f:link.typolink>
                 </section>
@@ -312,19 +312,19 @@
             <section class="col-md-offset-1 col-md-10">
                 <hr class="STEF_strok">
                 <span id="STEF_copyrights">
-                    <f:if condition="{data.tx_mask_stefcopyright}">
-                        <f:format.nl2br>{data.tx_mask_stefcopyright}</f:format.nl2br>
+                    <f:if condition="{data.tx_mask_footercopyrighttext}">
+                        <f:format.nl2br>{data.tx_mask_footercopyrighttext}</f:format.nl2br>
                     </f:if>
                 </span>
                 <span class="pull-right">
-                    <f:if condition="{data.tx_mask_stefcrlnk1}">
-                        <f:link.typolink parameter="{data.tx_mask_stefcrlnk1}">{data.tx_mask_stefcrlink1ttl}</f:link.typolink>
+                    <f:if condition="{data.tx_mask_ftrimprntlnk}">
+                        <f:link.typolink parameter="{data.tx_mask_ftrimprntlnk}">{data.tx_mask_ftrimprntttl}</f:link.typolink>
                     </f:if>
-                    <f:if condition="{data.tx_mask_stefcrlink2}">
-                        <f:link.typolink parameter="{data.tx_mask_stefcrlink2}">{data.tx_mask_stefcrlink2ttl}</f:link.typolink>
+                    <f:if condition="{data.tx_mask_ftrprvcylnk}">
+                        <f:link.typolink parameter="{data.tx_mask_ftrprvcylnk}">{data.tx_mask_ftrprvcyttl}</f:link.typolink>
                     </f:if>
-                    <f:if condition="{data.tx_mask_steflnk3}">
-                        <f:link.typolink parameter="{data.tx_mask_steflnk3}">{data.tx_mask_steflnk3ttl}</f:link.typolink>
+                    <f:if condition="{data.tx_mask_ftrstmplnkt}">
+                        <f:link.typolink parameter="{data.tx_mask_ftrstmplnkt}">{data.tx_mask_ftrstmpttl}</f:link.typolink>
                     </f:if>
                 </span>
             </section><!-- Copyrights Row End -->
