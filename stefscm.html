@@ -1,0 +1,12 @@
+<section class="row STEF_contacts-box STEF_headerContacts-xs visible-xs">
+    <f:if condition="{data.tx_mask_stefmcselmnts}">
+        <f:for each="{data.tx_mask_stefmcselmnts}" as="data_item">
+            <p>
+                <f:link.typolink parameter="{data_item.tx_mask_stefmsclnk}">
+                    <i class="{data_item.tx_mask_stefmscicn}"></i>
+                    <span class="STEF_contacts">{data_item.tx_mask_stefmscttl}</span>
+                </f:link.typolink>
+            </p>
+        </f:for>
+    </f:if>
+</section>

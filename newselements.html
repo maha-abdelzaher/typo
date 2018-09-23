@@ -1,0 +1,35 @@
+<div class="col-sm-4 news-list-block" >
+    <p class="date">
+        <f:if condition="{data.tx_mask_thdtelmnt}">
+            <f:format.date format="d.m.Y">{data.tx_mask_thdtelmnt}</f:format.date>
+        </f:if>
+    </p>
+    <h4>
+        <f:if condition="{data.tx_mask_thttlelmntnws}">
+            <f:format.nl2br>{data.tx_mask_thttlelmntnws}</f:format.nl2br>
+        </f:if>
+    </h4>
+    <a href="javascript:void();" title=""></a>
+    <div class="news-desc">
+        <f:if condition="{data.tx_mask_thlsubttlnews}">
+            <f:format.nl2br>{data.tx_mask_thlsubttlnews}</f:format.nl2br>
+        </f:if>
+    </div>
+    <a href="#" title="{data.tx_mask_thlnkurlnews}" data-toggle="modal" data-target="#mdldata{data.tx_mask_thdtelmnt}">{data.tx_mask_thlnkurlnews}</a>
+</div>
+<div class="modal fade" id="mdldata{data.tx_mask_thdtelmnt}" tabindex="-1" role="dialog" aria-labelledby="{data_item.tx_mask_thalmainnit}" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+                <h4 class="modal-title"><f:format.nl2br>{data.tx_mask_thttlelmntnws}</f:format.nl2br></h4>
+                <h6 class="modal-title"><f:format.nl2br>{data.tx_mask_thlsubttlnews}</f:format.nl2br></h6>
+            </div>
+            <div class="modal-body">
+                <f:if condition="{data.tx_mask_thdetnewselmnt}">
+                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_thdetnewselmnt}</f:format.html>
+                </f:if>
+            </div><!--./model-body-->
+        </div>
+    </div>
+</div>

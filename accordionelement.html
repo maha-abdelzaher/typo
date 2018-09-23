@@ -1,0 +1,14 @@
+<div class="collapseDiv">
+    <a data-toggle="collapse" href="#collapse05" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <f:if condition="{data.tx_mask_accordionheader}">
+            {data.tx_mask_accordionheader}
+        </f:if>
+    </a>
+    <div class="collapse" id="collapse05">
+        <div class="card card-body">
+            <f:if condition="{data.tx_mask_accordiondetails}">
+                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_accordiondetails}</f:format.html><br />
+            </f:if>
+        </div>
+    </div>
+</div>

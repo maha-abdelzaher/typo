@@ -1,0 +1,83 @@
+<f:if condition="{data.tx_mask_mainimage}">
+<f:for each="{data.tx_mask_mainimage}" as="file">
+    <section id="Home" class="topImg jumptarget">
+        <f:image image="{file}" alt="{file.alternative}" title="{file.title}" />
+    </section>
+</f:for>
+</f:if>
+<section class="topContent container">
+    <f:if condition="{data.tx_mask_ophptl}">
+        <div class="d-sm-none mobileInfo">
+            <f:link.typolink parameter="{data.tx_mask_ophptl}" class="phone"><i></i><span>{data.tx_mask_ophptt}</span></f:link.typolink>
+            <f:if condition="{data.tx_mask_ophpel}">
+                <f:link.typolink parameter="{data.tx_mask_ophpel}" class="emaili"><i></i><span>{data.tx_mask_ophpet}</span></f:link.typolink>
+            </f:if>
+            <f:if condition="{data.tx_mask_ophpll}">
+                <f:link.typolink parameter="{data.tx_mask_ophpll}" class="mapInfo"><i></i><span>{data.tx_mask_ophplt}</span></f:link.typolink>
+            </f:if>
+            <f:if condition="{data.tx_mask_ophpcl}">
+                <f:link.typolink parameter="{data.tx_mask_ophpcl}" class="register"><i></i><span>{data.tx_mask_ophpct}</span></f:link.typolink>
+            </f:if>
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_mainheader}">
+        <h1>{data.tx_mask_mainheader}</h1>
+    </f:if>
+    <f:if condition="{data.tx_mask_subheader}">
+        <h2>{data.tx_mask_subheader}</h2>
+    </f:if>
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 topContentIntro">
+            <f:if condition="{data.tx_mask_fulldescription}">
+                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_fulldescription}</f:format.html>
+            </f:if>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 topContentNews">
+            <f:if condition="{data.tx_mask_righttitle}">
+                <h3>{data.tx_mask_righttitle}</h3>
+            </f:if>
+            <f:if condition="{data.tx_mask_newsdata}">
+                <f:for each="{data.tx_mask_newsdata}" as="data_item">
+                    <div class="newsOne">
+                        <date><f:format.date format="d.m.Y">{data_item.tx_mask_newsdate}</f:format.date></date>
+                        <h4>{data_item.tx_mask_newsheader}</h4>
+                        <f:if condition="{data_item.tx_mask_newsdetails}">
+                            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.tx_mask_newsdetails}</f:format.html><br />
+                        </f:if>
+                    </div>
+                </f:for>
+            </f:if>
+        </div>
+    </div>
+</section>
+<f:if condition="{data.tx_mask_carddata}">
+    <section class="bottomContent container">
+        <div class="row">
+            <f:for each="{data.tx_mask_carddata}" as="data_item">
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 btmContentDiv">
+                    <f:link.typolink parameter="{data_item.tx_mask_cardlink}">
+                        <div class="btmContentBord">
+
+                            <f:if condition="{data_item.tx_mask_cardimage}">
+                                <f:for each="{data_item.tx_mask_cardimage}" as="file">
+                                    <f:image image="{file}" alt="{file.alternative}" title="{file.title}" />
+                                </f:for>
+                            </f:if>
+                            <f:if condition="{data_item.tx_mask_cardtitle}">
+                                <h2>{data_item.tx_mask_cardtitle}</h2>
+                            </f:if>
+                            <f:if condition="{data_item.tx_mask_carddescription}">
+                                <p>{data_item.tx_mask_carddescription}</p>
+                            </f:if>
+                            <f:if condition="{data_item.tx_mask_cardlink}">
+                                <p class="hehe_link">{data_item.tx_mask_cardlink}</p>
+                            </f:if>
+
+                        </div>
+                    </f:link.typolink>
+                </div>
+            </f:for>
+        </div>
+    </section>
+</f:if>
+

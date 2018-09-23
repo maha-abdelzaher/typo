@@ -1,0 +1,25 @@
+<div class="header-top">
+    <div class="thal-container">
+        <div class="row">
+            <f:if condition="{data.tx_mask_thalshortcutselmnts}">
+                <ul class="list-inline pull-right side-menu">
+                    <f:for each="{data.tx_mask_thalshortcutselmnts}" as="data_item">
+                        <li>
+                            <a href="{data_item.tx_mask_thalshortcutsl}" target="_blank">
+                                
+                                <f:if condition="{data_item.tx_mask_thalshortcutsi}">
+                                    <f:for each="{data_item.tx_mask_thalshortcutsi}" as="file">
+                                        <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  class="img-responsive" />
+                                    </f:for>
+                                </f:if>
+                                <f:if condition="{data_item.tx_mask_thalshortcutst}">
+                                    <span>{data_item.tx_mask_thalshortcutst}</span>
+                                </f:if>
+                            </a>
+                        </li>
+                    </f:for>
+                </ul>
+            </f:if>
+        </div>
+    </div>
+</div>

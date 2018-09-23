@@ -1,0 +1,293 @@
+<f:if condition="{data.tx_mask_thalmainh1}">
+    <section class="clearfix header-caption">
+        <div class="thal-container">
+            <div class="row">
+                <f:if condition="{data.tx_mask_thalmainbimg}">
+                    <f:then>
+                        <div class="col-sm-8 col-sm-push-4">
+                    </f:then>
+                    <f:else>
+                        <div class="col-sm-12 col-sm-push-4">
+                    </f:else>
+                </f:if>
+                <div class="txt-caption">
+                    <div id="c6" class="frame frame-100 frame-type-text frame-layout-0">
+                        <f:if condition="{data.tx_mask_thalmainh1}">
+                            <header>
+                                <h1 class="">
+                                    <f:format.nl2br>{data.tx_mask_thalmainh1}</f:format.nl2br>
+                                </h1>
+                            </header>
+                        </f:if>
+                        <f:if condition="{data.tx_mask_thalmaindetails}">
+                            <div style="color:white;">
+                                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_thalmaindetails}</f:format.html><br />
+                            </div>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+                <f:if condition="{data.tx_mask_thalmainbimg}">
+                    <div class="col-sm-4 col-sm-pull-8 thal-margin-small">
+                        <div id="c5" class="frame frame-default frame-type-image frame-layout-0">
+                            <div class="ce-image ce-left ce-above">
+                                <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                                    <div class="ce-row">
+                                        <div class="ce-column">
+                                            <figure class="image">
+                                                <f:for each="{data.tx_mask_thalmainbimg}" as="file">
+                                                    <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="image-embed-item img-responsive center-block" />
+                                                </f:for>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </f:if>
+        </div>
+        <f:if condition="{data.tx_mask_thalmainft}">
+            <div class="col-sm-12 seperator"></div>
+        </f:if>
+        </div>
+    </section>
+    </f:if>
+    <f:if condition="{data.tx_mask_thalmainft}">
+        <section class="clearfix our-team-block">
+            <div class="thal-container">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="c7" class="frame frame-200 frame-type-text frame-layout-0">
+                            <f:if condition="{data.tx_mask_thalmainch}">
+                                <h4 class="text-center">
+                                    <f:format.nl2br>{data.tx_mask_thalmainch}</f:format.nl2br>
+                                </h4>
+                            </f:if>
+                            <f:if condition="{data.tx_mask_thalmainch2}">
+                                <h3 class="text-center">
+                                    <f:format.nl2br>{data.tx_mask_thalmainch2}</f:format.nl2br>
+                                </h3>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+                <f:if condition="{data.tx_mask_thalmaincicn}">
+                    <div id="c8" class="frame frame-default frame-type-image frame-layout-0">
+                        <div class="ce-image ce-center ce-above">
+                            <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                                <div class="ce-outer">
+                                    <div class="ce-inner">
+                                        <div class="ce-row">
+                                            <div class="ce-column">
+                                                <figure class="image text-center">
+                                                    <f:for each="{data.tx_mask_thalmaincicn}" as="file">
+                                                        <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="image-embed-item" />
+                                                    </f:for>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </f:if>
+                <div class="row thal-margin-small">
+                    <f:if condition="{data.tx_mask_thalmainfh3}">
+                        <f:then>
+                            <div class="col-sm-4 thal-margin-small">
+                        </f:then>
+                        <f:else>
+                            <div class="col-sm-6 thal-margin-small">
+                        </f:else>
+                    </f:if>
+
+                    <div class="items">
+                        <f:if condition="{data.tx_mask_thalmainfh}">
+                            <div id="c10" class="frame frame-300 frame-type-textpic frame-layout-0">
+                                <div class="ce-textpic ce-center ce-above">
+                                    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                                        <div class="ce-outer">
+                                            <div class="ce-inner">
+                                                <div class="ce-row">
+                                                    <div class="ce-column">
+                                                        <figure class="image text-center">
+
+                                                            <f:for each="{data.tx_mask_thalmainficn}" as="file">
+                                                                <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="image-embed-item" />
+                                                            </f:for>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ce-bodytext">
+                                        <h5 class="item-title">
+                                            <f:if condition="{data.tx_mask_thalmainfh}">
+                                                <f:format.nl2br>{data.tx_mask_thalmainfh}</f:format.nl2br>
+                                            </f:if>
+                                        </h5>
+                                        <p class="text-left item-desc">
+                                            <f:if condition="{data.tx_mask_thalmainft}">
+                                                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_thalmainft}</f:format.html>
+                                            </f:if>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </f:if>
+                    </div>
+                </div>
+                <f:if condition="{data.tx_mask_thalmainfh3}">
+                    <f:then>
+                        <div class="col-sm-4 thal-margin-small">
+                    </f:then>
+                    <f:else>
+                        <div class="col-sm-6 thal-margin-small">
+                    </f:else>
+                </f:if>
+                <div class="items">
+                    <div id="c11" class="frame frame-300 frame-type-textpic frame-layout-0">
+                        <div class="ce-textpic ce-center ce-above">
+                            <f:if condition="{data.tx_mask_thalmainih2}">
+                                <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                                    <div class="ce-outer">
+                                        <div class="ce-inner">
+                                            <div class="ce-row">
+                                                <div class="ce-column">
+                                                    <figure class="image text-center">
+                                                        <f:for each="{data.tx_mask_thalmainsicn}" as="file">
+                                                            <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="image-embed-item" />
+                                                        </f:for>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </f:if>
+                            <div class="ce-bodytext">
+                                <f:if condition="{data.tx_mask_thalmainih2}">
+                                    <h5 class="item-title">
+                                        <f:format.nl2br>{data.tx_mask_thalmainih2}</f:format.nl2br>
+                                    </h5>
+                                </f:if>
+                                <p class="text-left item-desc">
+                                    <f:if condition="{data.tx_mask_thalmainst}">
+                                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_thalmainst}</f:format.html>
+                                    </f:if>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <f:if condition="{data.tx_mask_thalmainfh3}">
+                <div class="col-sm-4 thal-margin-small">
+                    <div class="items">
+                        <div id="c12" class="frame frame-300 frame-type-textpic frame-layout-0">
+                            <div class="ce-textpic ce-center ce-above">
+                                <f:if condition="{data.tx_mask_thalmainthicn}">
+                                    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                                        <div class="ce-outer">
+                                            <div class="ce-inner">
+                                                <div class="ce-row">
+                                                    <div class="ce-column">
+                                                        <figure class="image text-center">
+                                                            <f:for each="{data.tx_mask_thalmainthicn}" as="file">
+                                                                <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="image-embed-item" />
+                                                            </f:for>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </f:if>
+                                <div class="ce-bodytext">
+                                    <f:if condition="{data.tx_mask_thalmainfh3}">
+                                        <h5 class="item-title">
+                                            <f:format.nl2br>{data.tx_mask_thalmainfh3}</f:format.nl2br>
+                                        </h5>
+                                    </f:if>
+                                    <p class="text-left item-desc">
+                                        <f:if condition="{data.tx_mask_thalmainthtxt}">
+                                            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_thalmainthtxt}</f:format.html><br />
+                                        </f:if>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </f:if>
+            </div>
+            <f:if condition="{data.tx_mask_thalmainnrep}">
+                <div class="col-sm-12 seperator"></div>
+            </f:if>
+            </div>
+        </section>
+    </f:if>
+    <f:if condition="{data.tx_mask_thalmainnrep}">
+        <section class="clearfix news-list-block">
+            <div class="thal-container">
+                <div class="row">
+
+                    <div id="c13" class="frame frame-default frame-type-text frame-layout-0">
+                        <h5 class="col-sm-12">
+                            <f:if condition="{data.tx_mask_thalmainnh}">
+                                {data.tx_mask_thalmainnh}
+                            </f:if>
+                        </h5>
+                    </div>
+
+                    <f:if condition="{data.tx_mask_thalmainnrep}">
+                        <div id="c14" class="frame frame-default frame-type-list frame-layout-0">
+                            <f:for each="{data.tx_mask_thalmainnrep}" as="data_item">
+                                <div class="col-sm-4" style="margin-top:30px;">
+                                    <p class="date">
+                                        <f:if condition="{data_item.tx_mask_thalmainndt}">
+                                            <f:format.date format="d.m.Y">{data_item.tx_mask_thalmainndt}</f:format.date>
+                                        </f:if>
+                                    </p>
+                                    <h4>
+                                        <f:if condition="{data_item.tx_mask_thalmainnit}">
+                                            <f:format.nl2br>{data_item.tx_mask_thalmainnit}</f:format.nl2br>
+                                        </f:if>
+                                    </h4>
+                                    <a href="{data_item.tx_mask_thalmainlnkurl}" title="neu in unserer praxis"></a>
+                                    <div class="news-desc">
+                                        {data_item.tx_mask_thalnssbttl}
+                                    </div>
+                                    <a href="#" title="neu in unserer praxis" data-toggle="modal" data-target="#mdldata{data_item.tx_mask_thalnsuid}">{data_item.tx_mask_thalmainltxt}</a>
+                                </div>
+                                <div class="modal fade" id="mdldata{data_item.tx_mask_thalnsuid}" tabindex="-1" role="dialog" aria-labelledby="{data_item.tx_mask_thalmainnit}" style="display: none;">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+                                                <h4 class="modal-title">{data_item.tx_mask_thalmainnit}</h4>
+                                                <h6 class="modal-title"  style="color:black;">{data_item.tx_mask_thalnssbttl}</h6>
+                                            </div>
+                                            <div class="modal-body" style="color:black;">
+                                                <f:if condition="{data_item.tx_mask_thalmainndet}">
+                                                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.tx_mask_thalmainndet}</f:format.html>
+                                                </f:if>
+                                            </div><!--./model-body-->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default THAL_btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </f:for>
+                        </div>
+                    </f:if>
+                </div>
+            </div>
+        </section>
+    </f:if>

@@ -1,0 +1,25 @@
+ <!-- Collect the nav links, forms, and other content for toggling -->
+<div class="row thal-nav">
+    <div class="col-sm-12">
+        <f:if condition="{data.tx_mask_thalmsce}">
+            <ul class="nav navbar-nav navbar-right">
+                <f:for each="{data.tx_mask_thalmsce}" as="data_item">
+                    <li>
+                                <a href="{data_item.tx_mask_thalmscl}">
+                                    <f:if condition="{data_item.tx_mask_thalmsci}">
+                                        <f:for each="{data_item.tx_mask_thalmsci}" as="file">
+                                            <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="img-responsive" />
+                                        </f:for>
+                                    </f:if>
+                                    <f:if condition="{data_item.tx_mask_thalmsct}">
+                                        <span>{data_item.tx_mask_thalmsct}</span>
+                                    </f:if>
+                                </a>
+                    </li>
+                </f:for>
+</ul>
+        </f:if>
+</div>
+</div>
+<!-- mobil info end-->
+

@@ -1,0 +1,108 @@
+<section class="service-block clearfix">
+    <div id="c16" class="frame frame-default frame-type-text frame-layout-0">
+        <h3 class="text-center">
+            <f:if condition="{data.tx_mask_thalcontent1th}">
+                <f:format.nl2br>{data.tx_mask_thalcontent1th}</f:format.nl2br>
+            </f:if>
+        </h3>
+    </div>
+    <div id="c17" class="frame frame-default frame-type-list frame-layout-0">
+        <div class="tx-teaserbox">
+            <div class="container">
+                <div class="row">
+                    <f:if condition="{data.tx_mask_thalcontent1bimg}">
+                        <div class="col-sm-12 col-md-6 service-left">
+                            <f:link.typolink parameter="{data.tx_mask_thalcontent1lurl}" additionalAttributes="{ data-toggle='modal',data-target='#THAL_Modal'}">
+                                <div class="service-img">
+
+                                    <f:for each="{data.tx_mask_thalcontent1bimg}" as="file">
+                                        <!--<img src="/typo3conf/ext/thal/Resources/Public/Images/touch-hand_01.png" alt="" class="THAL_touch-mob-icon hidden-md hidden-lg" />-->
+                                        <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="img-responsive" />
+                                    </f:for>
+                                </div>
+                                <div class="service-bottom clearfix">
+                                    <h5>
+                                        <f:if condition="{data.tx_mask_thalcontent1lt1}">
+                                            <f:format.nl2br>{data.tx_mask_thalcontent1lt1}</f:format.nl2br>
+                                        </f:if>
+                                    </h5>
+                                    <h4>
+                                        <f:if condition="{data.tx_mask_thalcontent1lt2}">
+                                            <f:format.nl2br>{data.tx_mask_thalcontent1lt2}</f:format.nl2br>
+                                        </f:if>
+                                    </h4>
+                                    <p class="more-link pull-right">
+                                        <f:if condition="{data.tx_mask_thalcontent1lt}">
+                                            {data.tx_mask_thalcontent1lt}
+                                        </f:if>
+                                    </p>
+                                </div>
+                            </f:link.typolink>
+                        </div>
+                    </f:if>
+                    <f:if condition="{data.tx_mask_teaserwthimgs}">
+                        <f:then>
+                            <div class="col-sm-12 col-md-6 service-right">
+                                <f:if condition="{data.tx_mask_thalcontent1orep}">
+                                    <div class="row jole_sec jole_accordion">
+                                        <f:for each="{data.tx_mask_thalcontent1orep}" as="data_item">
+                                            <div class="col-md-6 col-xs-12">
+                                                <f:link.typolink parameter="{data_item.tx_mask_thalcontent1blurl}">
+                                                    <div class="service-img">
+                                                        <f:if condition="{data_item.tx_mask_thalcontent1bimg}">
+                                                            <f:for each="{data_item.tx_mask_thalcontent1bimg}" as="file">
+                                                                <!--                                                        <img src="/typo3conf/ext/thal/Resources/Public/Images/touch-hand_01.png" alt="" class="THAL_touch-mob-icon hidden-md hidden-lg">-->
+                                                                <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="img-responsive" />
+                                                            </f:for>
+                                                        </f:if>
+                                                    </div>
+                                                    <div class="service-bottom clearfix">
+                                                        <h5>
+                                                            <f:if condition="{data_item.tx_mask_thalcontent1bt1}">
+                                                                <f:format.nl2br>{data_item.tx_mask_thalcontent1bt1}</f:format.nl2br>
+                                                            </f:if>
+                                                        </h5>
+                                                        <h4>
+                                                            <f:if condition="{data_item.tx_mask_thalcontent1bt2}">
+                                                                <f:format.nl2br>{data_item.tx_mask_thalcontent1bt2}</f:format.nl2br>
+                                                            </f:if>
+                                                        </h4>
+                                                        <p class="more-link pull-right">
+                                                            <f:if condition="{data_item.tx_mask_thalcontent1blt}">
+                                                                {data_item.tx_mask_thalcontent1blt}
+                                                            </f:if>
+                                                        </p>
+                                                    </div>
+                                                </f:link.typolink>
+                                            </div>
+                                        </f:for>
+                                    </div>
+                                </f:if>
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <div class="jole_sec jole_accordion">
+                                <f:for each="{data.tx_mask_thalcontent1orep}" as="data_item">
+                                    <div class="col-md-4 col-xs-12">
+                                        <div class="Block">
+                                            <f:link.typolink parameter="{data_item.tx_mask_thalcontent1blurl}">
+                                                <span>
+                                                        <f:if condition="{data_item.tx_mask_thalcontent1bt1}">
+                                                            <f:format.nl2br>{data_item.tx_mask_thalcontent1bt1}</f:format.nl2br>
+                                                        </f:if>
+                                                    </span>
+                                                <div class="MoreIcon pull-right"><span><f:if condition="{data_item.tx_mask_thalcontent1blt}">
+                                                            {data_item.tx_mask_thalcontent1blt}
+                                                        </f:if></span> <i class="fa fa-plus-circle"></i></div>
+                                            </f:link.typolink>
+                                        </div>
+                                    </div>
+                                </f:for>
+                            </div>
+                        </f:else>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

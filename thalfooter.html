@@ -1,0 +1,88 @@
+<footer class="clearfix">
+    <div class="footer-top clearfix">
+        <div class="thal-container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 map-wrap">
+                    <iframe src="{data.tx_mask_thalfootermurl}" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <f:if condition="{data.tx_mask_thalfooterh1}">
+                        <h4>
+                            <f:if condition="{data.tx_mask_thalfooterimg1}">
+                                <f:for each="{data.tx_mask_thalfooterimg1}" as="file">
+                                    <span>
+                                        <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="img-responsive" />
+                                    </span>
+                                </f:for>
+                            </f:if>
+                            <span>{data.tx_mask_thalfooterh1}</span>
+                        </h4>
+                    </f:if>
+                    <div class="address-wrap">
+
+                        <div id="c2" class="frame frame-default frame-type-text frame-layout-0">
+                            <f:if condition="{data.tx_mask_thalfootertext1}">
+                                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_thalfootertext1}</f:format.html>
+                            </f:if>
+                        </div>
+
+                    </div>
+                    <f:if condition="{data.tx_mask_thalfootercl}">
+                        <f:link.typolink parameter="{data.tx_mask_thalfootercl}">
+                                <button class="btn btn-default thal-btn" type="button">
+                                    <f:if condition="{data.tx_mask_thalfooterct}">
+                                        {data.tx_mask_thalfooterct}
+                                    </f:if>
+                                </button>
+                        </f:link.typolink>
+                    </f:if>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <h4>
+                        <f:if condition="{data.tx_mask_thalfooterimg2}">
+                            <f:for each="{data.tx_mask_thalfooterimg2}" as="file">
+                                <span>
+                                    <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  class="img-responsive" />
+                                </span>
+                            </f:for>
+                        </f:if>
+                        <f:if condition="{data.tx_mask_thalfooterh2}">
+                            <span>{data.tx_mask_thalfooterh2}</span>
+                        </f:if>  
+                    </h4>
+                    <div class="date-time-block">
+                        <f:if condition="{data.tx_mask_thalfootertext2}">
+                            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_thalfootertext2}</f:format.html>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom clearfix">
+        <div class="thal-container">
+            <div class="col-sm-12 col-md-6">
+                <div class="pull-left">
+                    <div id="c1" class="frame frame-default frame-type-text frame-layout-0 thal-footer-links">
+                        <f:if condition="{data.tx_mask_thalfootercrt}">
+                            <p>{data.tx_mask_thalfootercrt}</p>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <ul class="list-inline pull-right thal-footer-links">
+                    <li>
+                        <f:link.typolink parameter="{data.tx_mask_thalfooteril}">{data.tx_mask_thalfooterit}</f:link.typolink>
+                    </li>
+                    <li>
+                        <f:link.typolink parameter="{data.tx_mask_thalfooterpl}">{data.tx_mask_thalfooterpt}</f:link.typolink>
+                    </li>
+                    <li>
+                        <f:link.typolink parameter="{data.tx_mask_thalfooterl3}">{data.tx_mask_thalfooterl3t}</f:link.typolink>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,44 @@
+<section class="innerImgCarouselhome">
+  <section class="topImagehome container-fluidhome">
+                      <f:if condition="{data.tx_mask_homepagetopheadermask}">
+                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_homepagetopheadermask}</f:format.html>
+                      </f:if>
+                  </section>
+  <a href="#demo10">
+      <f:if condition="{data.tx_mask_homepagecarouselarrow}">
+          <f:for each="{data.tx_mask_homepagecarouselarrow}" as="file">
+              <f:image image="{file}" alt="" class="header-arrowhome" />
+          </f:for>
+      </f:if>
+                      </a>
+  <div class="sliderContainer">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <f:if condition="{data.tx_mask_homepagecarouselrepeater}">
+                <f:then>
+                  <f:for each="{data.tx_mask_homepagecarouselrepeater}" as="data_item">
+                    <f:if condition="{data_item.tx_mask_homepagecarouselimage}">
+                      <f:for each="{data_item.tx_mask_homepagecarouselimage}" as="file"  iteration="itemIterator">
+                        <f:if condition="{itemIterator.cycle}==1">
+                                    <f:then>
+                                        <div class="carousel-item active">
+                                                <section class="topImage container-fluid" style="background: url(/fileadmin{file.identifier}) no-repeat;background-size: cover;" />
+                                      </div>
+                                    </f:then>
+                                    <f:else>
+                                        <div class="carousel-item">
+                                                <section class="topImage container-fluid" style="background: url(/fileadmin{file.identifier}) no-repeat;background-size: cover;" />
+                                      </div>
+                                    </f:else>
+                                </f:if>
+                      </f:for>
+                    </f:if>
+                  </f:for>
+                </f:then>
+              </f:if>
+          </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+</div>
+</div>
+</section>

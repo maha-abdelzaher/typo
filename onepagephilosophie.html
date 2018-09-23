@@ -1,0 +1,26 @@
+<section id="{data.tx_mask_philosophieserctionname}" class="pinkContent jumptarget">
+<f:if condition="{data.tx_mask_topimage}">
+<f:for each="{data.tx_mask_topimage}" as="file">
+  <f:image image="{file}" alt="{file.alternative}" title="{file.title}" />
+</f:for>
+</f:if>
+  <div class="container">
+      <f:if condition="{data.tx_mask_titlebar}">
+          <h3>
+              {data.tx_mask_titlebar}
+          </h3>
+      </f:if>
+    <div class="row">
+        <f:if condition="{data.tx_mask_leftcolumn}">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 pinkCntentDiv">
+                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_leftcolumn}</f:format.html>
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_rightcolumn}">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 pinkCntentDiv">
+                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_rightcolumn}</f:format.html>
+            </div>
+        </f:if>
+    </div>
+  </div>
+</section>

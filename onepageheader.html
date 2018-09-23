@@ -1,0 +1,10 @@
+<header id="top">
+<f:if condition="{data.tx_mask_headerlogo}">
+<f:for each="{data.tx_mask_headerlogo}" as="file">
+  <a href="#" class="logo">
+  <f:image image="{file}" alt="{file.alternative}" title="{file.title}" /><br />
+</a>
+</f:for>
+</f:if>
+</header>
+

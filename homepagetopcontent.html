@@ -1,0 +1,28 @@
+<f:if condition="{data.tx_mask_backgroundimage}">
+  <f:then>
+    <f:for each="{data.tx_mask_backgroundimage}" as="file"  iteration="iterator">
+      <section class="topImage container-fluid" style="background: url(/fileadmin{file.identifier}) no-repeat;background-size: cover;">
+        <f:if condition="{data.tx_mask_text}">
+          <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_text}</f:format.html>
+        </f:if>
+        <a href="#demo10">
+          <img class="header-arrow" src="/fileadmin/templates/public/img/header-arrow.png" alt="">
+        </a>
+      </section>
+    </f:for>
+  </f:then>
+  <f:else>
+    <section class="topImage container-fluid" style="background: none;">
+      <f:if condition="{data.tx_mask_text}">
+        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_text}</f:format.html>
+      </f:if>
+      <a href="#demo10">
+        <img class="header-arrow" src="/fileadmin/templates/public/img/header-arrow.png" alt="">
+      </a>
+    </section>
+  </f:else>
+</f:if>
+
+
+
+

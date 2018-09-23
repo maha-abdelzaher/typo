@@ -1,0 +1,35 @@
+<section class="row STEF_Misc">
+    <f:if condition="{data.tx_mask_stefsliderelements}">
+            <f:for each="{data.tx_mask_stefsliderelements}" as="data_item">
+                <figure class="imghvr-slide-up STEF_teaser_image1 col-md-6 col-xs-12 no-padding">
+                    <img src="/typo3conf/ext/stef/Resources/Public/Images/touch_icon.svg" class="STEF_touch-icon hidden-md hidden-lg">
+                    <f:if condition="{data_item.tx_mask_stefsliderimgimg}">
+                        <f:for each="{data_item.tx_mask_stefsliderimgimg}" as="file">
+                            <img src="fileadmin/{file.description}/{file.identifier}">
+                        </f:for>
+                    </f:if>
+                    <figcaption>
+                        <h3>
+                            <f:if condition="{data_item.tx_mask_stefsliderttl}">
+                                {data_item.tx_mask_stefsliderttl}
+                            </f:if>
+                        </h3>
+                        <p>
+                            <f:if condition="{data_item.tx_mask_stefsliderdetls}">
+                                <f:format.nl2br>{data_item.tx_mask_stefsliderdetls}</f:format.nl2br>
+                            </f:if>
+                        </p>
+                        <!--<a href="javascript:void(0);" class="btn btn-primary">
+                                        {data_item.tx_mask_stefsliderlnktitle}
+                        </a>-->
+                        <f:if condition="{data_item.tx_mask_stefsliderimglink}">
+                            <f:link.typolink parameter="{data_item.tx_mask_stefsliderimglink}"  class="btn btn-primary">
+                                {data_item.tx_mask_stefsliderlnktitle}
+                            </f:link.typolink>
+                        </f:if>
+                    </figcaption>
+                </figure>
+
+            </f:for>
+    </f:if>
+</section><!-- Misc Content End -->

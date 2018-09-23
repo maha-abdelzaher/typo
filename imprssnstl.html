@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel-group" id="accordion-20">
+            <f:if condition="{data.tx_mask_imprssnlefts}">
+                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_imprssnlefts}</f:format.html>
+            </f:if>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="panel-group" id="accordion-27">
+            <div class="panel panel-default" style="border:1px  solid;border-color:white;">
+                <div class="panel-heading" id="left21" style="background-color:#636363;">
+                    <h4 class="panel-title">
+                        <a role="button"
+                           data-toggle="collapse"
+                           data-parent="#accordion-20"
+                           href="http://thal.softsms.mobi/leistungen/index.html#collapse-21"
+                           aria-expanded="false"
+                           aria-controls="collapse-21"
+                           class="collapsed accordion-toggle">
+                            <span class="fa fa-angle-down"></span>
+                            <f:if condition="{data.tx_mask_imprssnacct}">
+                                <f:format.nl2br>{data.tx_mask_imprssnacct}</f:format.nl2br>
+                            </f:if>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-21" class="panel-collapse collapse in" role="tabpanel" style="background-color:#636363;">
+                    <div class="panel-body">
+                        <div id="c21" class="frame frame-default frame-type-text frame-layout-0">
+                            <header>
+                                <h4 class="">
+                                    <f:if condition="{data.tx_mask_imprssnacct}">
+                                        <f:format.nl2br>{data.tx_mask_imprssnacct}</f:format.nl2br>
+                                    </f:if>
+                                </h4>
+                            </header>
+                            <f:if condition="{data.tx_mask_imprssnacctxt}">
+                                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_imprssnacctxt}</f:format.html>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

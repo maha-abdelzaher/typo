@@ -1,0 +1,28 @@
+    <div class="panel panel-default">
+        <div class="panel-heading" id="left{data.tx_mask_thalaccordionnm}">
+            <a role="button"
+               data-toggle="collapse"
+               data-parent="#accordion-20"
+               href="#collapse-{data.tx_mask_thalaccordionnm}"
+               aria-expanded="false"
+               aria-controls="collapse-{data.tx_mask_thalaccordionnm}"
+               class="collapsed accordion-toggle" style="text-decoration:none;">
+                <h4 class="panel-title">
+                    <span class="fa fa-angle-down"></span>
+                    <f:if condition="{data.tx_mask_thalaccordionttl}">
+                        <f:format.nl2br>{data.tx_mask_thalaccordionttl}</f:format.nl2br>
+                    </f:if>
+                </h4>
+            </a>
+        </div>
+        <div id="collapse-{data.tx_mask_thalaccordionnm}" class="panel-collapse collapse" role="tabpanel">
+            <div class="panel-body">
+                <div id="c21" class="frame frame-default frame-type-text frame-layout-0">
+                    
+                    <f:if condition="{data.tx_mask_thalaccordionttxt}">
+                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_thalaccordionttxt}</f:format.html>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>

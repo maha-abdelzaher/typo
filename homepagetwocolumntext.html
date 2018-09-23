@@ -1,0 +1,36 @@
+<section class="topContent container">
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 topContentDiv">
+            <div class="d-sm-none mobileInfo">
+                <f:if condition="{data.tx_mask_mobileinfophone}">
+                    <a href="tel:{data.tx_mask_mobileinfophone}" class="phone"><i></i><span>{data.tx_mask_sebimipht}</span></a>
+                </f:if>
+                <f:if condition="{data.tx_mask_mobileinfoemailtitle}">
+                    <a href="mailto:{data.tx_mask_mobileinfoemail}" class="emaili"><i></i><span>{data.tx_mask_mobileinfoemailtitle}</span></a>
+                </f:if>
+                <f:if condition="{data.tx_mask_mobileinfolocationtitle}">
+                    <a href="{data.tx_mask_mobileinfomaplocation}" class="map"><i></i><span>{data.tx_mask_mobileinfolocationtitle}</span></a>
+                </f:if>
+                <f:if condition="{data.tx_mask_mobileinforegistercontact}">
+                    <f:if condition="{data.tx_mask_mobileinfocontactform}">
+                        <f:for each="{data.tx_mask_mobileinfocontactform}" as="file">
+                            <a href="/fileadmin/{file.description}/{file.identifier}" class="register"><i></i><span>{data.tx_mask_mobileinforegistercontact}</span></a>
+                        </f:for>
+                    </f:if>
+                </f:if>
+            </div>
+			<f:if condition="{data.tx_mask_leftcontent}">
+			<f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_leftcontent}</f:format.html>
+			</f:if>
+		</div>
+		<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 topContentDiv">
+			<f:if condition="{data.tx_mask_rightcontent}">
+				<f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_rightcontent}</f:format.html>
+			</f:if>
+		</div>
+	</div>
+</section>
+
+
+
+

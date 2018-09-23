@@ -1,0 +1,13 @@
+    <a data-toggle="collapse" href="#{data.tx_mask_generalacordionname}" style="display: block;width: 100%;border: 3px solid #e0ced0;padding: 10px;margin-bottom: 10px;font-size: 1rem;font-family: 'Museosans-700';" role="button" aria-expanded="false">
+        <f:if condition="{data.tx_mask_generalacordionelementhead}">
+            {data.tx_mask_generalacordionelementhead}
+        </f:if>
+      <img class="arrow-icon" src="/typo3conf/ext/sebi/Resources/Public/Images/si-glyph-arrow-thick-down.png" alt="" style="float:right;">
+    </a>
+    <div class="collapse" foraccordion="true" id="{data.tx_mask_generalacordionname}">
+        <p>
+            <f:if condition="{data.tx_mask_generalacordionelementdetails}">
+                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_generalacordionelementdetails}</f:format.html><br />
+            </f:if>
+        </p>
+    </div>

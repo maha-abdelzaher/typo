@@ -1,0 +1,227 @@
+<!-- 
+
+-->
+
+<f:if condition="{data.tx_mask_newselmntscrs}">
+    <section class="row bg-gray jole_sec jole_news-carousel">
+        <div class="col-md-10 col-md-offset-1">
+            
+                <f:if condition="{data.tx_mask_necarasoueltitle}">
+                    <h3 class="text-purple center"><f:format.nl2br>{data.tx_mask_necarasoueltitle}</f:format.nl2br></h3>
+                </f:if>
+            
+
+            <div id="crsl{data.tx_mask_nwsctnrunqnm}" class="carousel slide" data-ride="carousel">
+
+
+                <div class="carousel-inner" role="listbox">
+                    <f:for each="{data.tx_mask_newselmntscrs}" as="data_item" iteration="itemIterator">
+
+                        <f:if condition="{itemIterator.cycle}==1">
+                            <f:then>
+                                <div class="item active">
+                                    <f:if condition="{data_item.tx_mask_newscrlimg}">
+                                        <f:for each="{data_item.tx_mask_newscrlimg}" as="file">
+                                            <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+                                        </f:for>
+                                    </f:if>
+                                    <div class="carousel-caption">
+                                        <p>
+                                            <f:if condition="{data_item.tx_mask_newscrsldt}">
+                                                <f:format.date format="d.m.Y">{data_item.tx_mask_newscrsldt}</f:format.date><br />
+                                            </f:if>
+                                        </p>
+                                        <h1 class="font-roman">
+                                            <f:if condition="{data_item.tx_mask_newscarslttl}">
+                                                <f:format.nl2br>{data_item.tx_mask_newscarslttl}</f:format.nl2br><br />
+                                            </f:if>
+                                        </h1>
+                                        <h5>
+                                            <f:if condition="{data_item.tx_mask_newscrclsttl}">
+                                                <f:format.nl2br>{data_item.tx_mask_newscrclsttl}</f:format.nl2br><br />
+                                            </f:if>
+                                        </h5>
+                                        <p>
+                                            <f:if condition="{data_item.tx_mask_newcrssd}">
+                                                <f:format.nl2br>{data_item.tx_mask_newcrssd}</f:format.nl2br><br />
+                                            </f:if>
+                                        </p>
+
+                                        <f:if condition="{data_item.tx_mask_newscrcllnk}">
+                                            <f:link.typolink parameter="{data_item.tx_mask_newscrcllnk}">{data_item.tx_mask_newscrcllnk}</f:link.typolink><br />
+                                            <f:if condition="{data_item.tx_mask_newscrlnktxt}">
+                                                <f:format.nl2br>{data_item.tx_mask_newscrlnktxt}</f:format.nl2br><br />
+                                            </f:if>
+                                        </f:if>
+                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#crsl{data.tx_mask_nwsctnrunqnm}{itemIterator.cycle}{itemIterator.index}{f:if(condition: data.tx_mask_newselmntscrs, then: 1, else: 0)}">
+                                            mehr erfahren
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="crsl{data.tx_mask_nwsctnrunqnm}{itemIterator.cycle}{itemIterator.index}{f:if(condition: data.tx_mask_newselmntscrs, then: 1, else: 0)}" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title">
+                                                    <f:if condition="{data_item.tx_mask_newscarslttl}">
+                                                        <f:format.nl2br>{data_item.tx_mask_newscarslttl}</f:format.nl2br><br />
+                                                    </f:if>
+                                                </h4>
+                                            </div>
+                                            <!---->
+                                            <div class="modal-body">
+                                                <h5 class="text-purple">
+                                                    <f:if condition="{data_item.tx_mask_newscrclsttl}">
+                                                <f:format.nl2br>{data_item.tx_mask_newscrclsttl}</f:format.nl2br><br />
+                                            </f:if>
+                                                </h5>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <f:if condition="{data_item.tx_mask_newscrlimg}">
+                                                            <f:for each="{data_item.tx_mask_newscrlimg}" as="file">
+                                                                <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+                                                            </f:for>
+                                                        </f:if>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="col-md-8">
+                                                        <p>
+
+                                                            <f:if condition="{data_item.tx_mask_newscrsdes}">
+                                                                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.tx_mask_newscrsdes}</f:format.html><br />
+                                                            </f:if>
+
+
+                                                        </p>
+                                                    </div>
+                                                    <!---->
+                                                </div>
+                                                <!---->
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <a href="" class="button-1 m-color redy pull-right" data-dismiss="modal" aria-label="Close"> schließen</a>
+                                                <div class="clear"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal - read more -->
+                            </f:then>
+                            <f:else>
+                                <div class="item">
+                                    <f:if condition="{data_item.tx_mask_newscrlimg}">
+                                        <f:for each="{data_item.tx_mask_newscrlimg}" as="file">
+                                            <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+                                        </f:for>
+                                    </f:if>
+                                    <div class="carousel-caption">
+                                        <p>
+                                            <f:if condition="{data_item.tx_mask_newscrsldt}">
+                                                <f:format.date format="d.m.Y">{data_item.tx_mask_newscrsldt}</f:format.date><br />
+                                            </f:if>
+                                        </p>
+                                        <h1 class="font-roman">
+                                            <f:if condition="{data_item.tx_mask_newscarslttl}">
+                                                <f:format.nl2br>{data_item.tx_mask_newscarslttl}</f:format.nl2br><br />
+                                            </f:if>
+                                        </h1>
+                                        <h5>
+                                            <f:if condition="{data_item.tx_mask_newscrclsttl}">
+                                                <f:format.nl2br>{data_item.tx_mask_newscrclsttl}</f:format.nl2br><br />
+                                            </f:if>
+                                        </h5>
+                                        <p>
+                                            <f:if condition="{data_item.tx_mask_newcrssd}">
+                                                <f:format.nl2br>{data_item.tx_mask_newcrssd}</f:format.nl2br><br />
+                                            </f:if>
+                                        </p>
+
+                                        <!--<f:if condition="{data_item.tx_mask_newscrcllnk}">
+                                            <f:link.typolink parameter="{data_item.tx_mask_newscrcllnk}">{data_item.tx_mask_newscrcllnk}</f:link.typolink><br />
+                                            <f:if condition="{data_item.tx_mask_newscrlnktxt}">
+                                                <f:format.nl2br>{data_item.tx_mask_newscrlnktxt}</f:format.nl2br><br />
+                                            </f:if>
+                                        </f:if>-->
+                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#crsl{data.tx_mask_nwsctnrunqnm}{itemIterator.cycle}{itemIterator.index}{f:if(condition: data.tx_mask_newselmntscrs, then: 1, else: 0)}">
+                                            mehr erfahren
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="crsl{data.tx_mask_nwsctnrunqnm}{itemIterator.cycle}{itemIterator.index}{f:if(condition: data.tx_mask_newselmntscrs, then: 1, else: 0)}" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title">
+                                                    <f:if condition="{data_item.tx_mask_newscarslttl}">
+                                                        <f:format.nl2br>{data_item.tx_mask_newscarslttl}</f:format.nl2br><br />
+                                                    </f:if>
+                                                </h4>
+                                            </div>
+                                            <!---->
+                                            <div class="modal-body">
+                                                <h5 class="text-purple">
+                                                    <f:if condition="{data_item.tx_mask_newscrclsttl}">
+                                                <f:format.nl2br>{data_item.tx_mask_newscrclsttl}</f:format.nl2br><br />
+                                            </f:if>
+                                                </h5>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <f:if condition="{data_item.tx_mask_newscrlimg}">
+                                                            <f:for each="{data_item.tx_mask_newscrlimg}" as="file">
+                                                                <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+                                                            </f:for>
+                                                        </f:if>
+                                                    </div>
+                                                    <!---->
+                                                    <div class="col-md-8">
+                                                        <p>
+
+                                                            <f:if condition="{data_item.tx_mask_newscrsdes}">
+                                                                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.tx_mask_newscrsdes}</f:format.html><br />
+                                                            </f:if>
+
+
+                                                        </p>
+                                                    </div>
+                                                    <!---->
+                                                </div>
+                                                <!---->
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <a href="" class="button-1 m-color redy pull-right" data-dismiss="modal" aria-label="Close"> schließen</a>
+                                                <div class="clear"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal - read more -->
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </div>
+
+                <a class="left carousel-control" href="#crsl{data.tx_mask_nwsctnrunqnm}" role="button" data-slide="prev">
+                    <span class="fa fa-angle-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#crsl{data.tx_mask_nwsctnrunqnm}" role="button" data-slide="next">
+                    <span class="fa fa-angle-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+        <!---->
+
+    </section>
+</f:if>

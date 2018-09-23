@@ -1,0 +1,15 @@
+<a href="{data.tx_mask_contentcontainerlink}">
+    <f:if condition="{data.tx_mask_innerlefttext}">
+        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_innerlefttext}</f:format.html>
+    </f:if>
+  <div class="d-none d-xl-block">
+    <f:if condition="{data.tx_mask_innerlefttextsecond}">
+<f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_innerlefttextsecond}</f:format.html>
+</f:if>
+    <f:if condition="{data.tx_mask_innerleftphone}">
+      <span class="divider"></span>
+        <a href="tel:{data.tx_mask_innerleftphone}">
+          <p>{data.tx_mask_leftsideprefixphonenumber} {data.tx_mask_innerleftphone}</p></a>
+    </f:if>
+        </div>
+</a>

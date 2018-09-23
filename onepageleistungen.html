@@ -1,0 +1,42 @@
+<section id="{data.tx_mask_leistungensectionname}" class="list container jumptarget">
+    <f:if condition="{data.tx_mask_leistungenheader}">
+        <h3>
+            {data.tx_mask_leistungenheader}
+        </h3>
+    </f:if>
+  <f:if condition="{data.tx_mask_accourdionscontainer}">
+      <div class="row">
+          <f:for each="{data.tx_mask_accourdionscontainer}" as="data_item" iteration="itemIterator">
+              <div class="col-md-6">
+                  <div class="panel panel-default">
+                      <div class="panel-heading" id="left{data.tx_mask_thalaccordionnm}">
+                          <a role="button"
+                             data-toggle="collapse"
+                             data-parent="#accordion-20"
+                             href="#collapse-{itemIterator.cycle}"
+                             aria-expanded="false"
+                             aria-controls="collapse-{itemIterator.cycle}"
+                             class="collapsed accordion-toggle" style="text-decoration:none;">
+                              <h4 class="panel-title">
+                                  <span class="fa fa-angle-down"></span>
+                                  <f:if condition="{data_item.tx_mask_accourdionheader}">
+                                      {data_item.tx_mask_accourdionheader}
+                                  </f:if>
+                              </h4>
+                          </a>
+                      </div>
+                      <div id="collapse-{itemIterator.cycle}" class="panel-collapse collapse" role="tabpanel" style="background-color:#636363;">
+                          <div class="panel-body">
+                              <div id="c21" class="frame frame-default frame-type-text frame-layout-0">
+                                  <f:if condition="{data_item.tx_mask_accourdiondetails}">
+                                      <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.tx_mask_accourdiondetails}</f:format.html>
+                                  </f:if>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </f:for>
+      </div>
+  </f:if>
+</section>

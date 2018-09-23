@@ -1,0 +1,45 @@
+
+<f:if condition="{data.tx_mask_videogridtitle}">
+    <f:format.nl2br><h3 class="video-title">{data.tx_mask_videogridtitle}</h3></f:format.nl2br>
+</f:if>
+
+<f:if condition="{data.tx_mask_videogridrep}">
+<ul class="row video-block">
+<f:for each="{data.tx_mask_videogridrep}" as="data_item" iteration="itemIterator">   
+<li class="{f:if(condition: data.tx_mask_vediogridchckone, then: 'col-lg-12', else: 'col-lg-3')} col-md-4 col-xs-6 video-thumb">
+<f:if condition="{data_item.tx_mask_videogridvimg}">
+<f:for each="{data_item.tx_mask_videogridvimg}" as="file">
+    <img src="/fileadmin{file.description}/{file.identifier}" alt="{file.alternative}" title="{file.title}" class="img-responsive" />
+</f:for>
+</f:if>
+<a href="javascript:void(0);" data-toggle="modal" data-target="#video_Modal{itemIterator.cycle}{itemIterator.index}{f:if(condition: data.tx_mask_vediogridchckone, then: 1, else: 0)}">
+     <f:if condition="{data_item.tx_mask_videogridvideotitle}">
+         <h5>{data_item.tx_mask_videogridvideotitle}</h5>
+    </f:if>
+    <i class="fa fa-play-circle"></i>   
+</a>
+ <!-- Modal -->
+        <div class="modal fade" id="video_Modal{itemIterator.cycle}{itemIterator.index}{f:if(condition: data.tx_mask_vediogridchckone, then: 1, else: 0)}" tabindex="-1" role="dialog" aria-labelledby="video_ModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="video_ModalLabel">{data_item.tx_mask_videogridvideotitle}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div><!--./modal-header-->
+              <div class="modal-body video">
+                <f:if condition="{data_item.tx_mask_videogridfnl}">
+<f:for each="{data_item.tx_mask_videogridfnl}" as="file">
+  <video controls>
+                  <source src="/fileadmin{file.description}/{file.identifier}" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+</f:for>
+</f:if>
+              </div><!--./model-body-->
+            </div>
+          </div>
+        </div><!--./Modal-->
+</li>
+</f:for>
+</ul>
+</f:if>
