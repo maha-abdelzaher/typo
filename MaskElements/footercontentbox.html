@@ -336,41 +336,41 @@
   <f:if condition="{data.tx_mask_ftrstlchs}==5">
     <div class="row"><!-- HEHE -->
     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 footerDiv">
-        <f:if condition="{data.tx_mask_column1left}">
-            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_column1left}</f:format.html>
+        <f:if condition="{data.tx_mask_footerbox1}">
+            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_footerbox1}</f:format.html>
         </f:if>
-        <f:if condition="{data.tx_mask_contactlink}">
-            <f:link.typolink parameter="{data.tx_mask_contactlink}"  class="linkedMe">{data.tx_mask_contacttitle}</f:link.typolink>
+        <f:if condition="{data.tx_mask_contactuslink}">
+            <f:link.typolink parameter="{data.tx_mask_contactuslink}"  class="linkedMe">{data.tx_mask_contactustext}</f:link.typolink>
         </f:if>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 footerDiv">
-        <f:if condition="{data.tx_mask_column2right}">
-            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_column2right}</f:format.html>
+        <f:if condition="{data.tx_mask_footerbox3}">
+            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_footerbox3}</f:format.html>
         </f:if>
     </div>
 </div>
 <div class="row map">
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <iframe src="{data.tx_mask_mapframeurl}" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        <iframe src="{data.tx_mask_gglmpurl}" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen=""></iframe>
     </div>
 </div>
 <div class="row copyright">
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <ul>
-            <li>{data.tx_mask_copyrighttext}</li>
+            <li>{data.tx_mask_footercopyrighttext}</li>
             <li   style="margin-right:20px;margin-left:20px;">
-                <f:if condition="{data.tx_mask_onepagersml}">
-                    <f:link.typolink parameter="{data.tx_mask_onepagersml}">{data.tx_mask_onepagersmt}</f:link.typolink>
+                <f:if condition="{data.tx_mask_ftrimprntlnk}">
+                    <f:link.typolink parameter="{data.tx_mask_ftrimprntlnk}">{data.tx_mask_ftrimprntttl}</f:link.typolink>
                 </f:if>
             </li>
             <li  style="margin-right:20px;">
-                <f:if condition="{data.tx_mask_privacylink}">
-                    <f:link.typolink parameter="{data.tx_mask_privacylink}">{data.tx_mask_onepagefooterimprinttitle}</f:link.typolink>
+                <f:if condition="{data.tx_mask_ftrprvcylnk}">
+                    <f:link.typolink parameter="{data.tx_mask_ftrprvcylnk}">{data.tx_mask_ftrprvcyttl}</f:link.typolink>
                 </f:if>
             </li>
             <li style="margin-right:20px;">
-                <f:if condition="{data.tx_mask_imprintlink}">
-                    <f:link.typolink parameter="{data.tx_mask_imprintlink}">{data.tx_mask_onepagefooterprivacytitle}</f:link.typolink>
+                <f:if condition="{data.tx_mask_ftrstmplnkt}">
+                    <f:link.typolink parameter="{data.tx_mask_ftrstmplnkt}">{data.tx_mask_ftrstmpttl}</f:link.typolink>
                 </f:if>
             </li>
         </ul>
@@ -383,25 +383,25 @@
         <div class="row">
             <article class="col-xs-offset-1 col-md-10">
                 <section class="col-md-6 col-xs-6 col-xxs-12">
-                    <h3><i class="fa fa-home"></i> {data.tx_mask_jokot1}</h3>
+                    <h3><i class="fa fa-home"></i> {data.tx_mask_ftrleftttle}</h3>
                     <div>
-                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_jokotxt1}</f:format.html>
+                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_footerbox1}</f:format.html>
                     </div>
-                    <f:link.typolink parameter="{data.tx_mask_jokol1}" class="btn btn-primary">
-                        <f:if condition="{data.tx_mask_jokol1t}">
-                            {data.tx_mask_jokol1t}
+                    <f:link.typolink parameter="{data.tx_mask_contactuslink}" class="btn btn-primary">
+                        <f:if condition="{data.tx_mask_contactustext}">
+                            {data.tx_mask_contactustext}
                         </f:if>
                     </f:link.typolink>
                 </section><!-- KONTAKT End -->
 
                 <section class="col-md-6 col-xs-6 col-xxs-12">
-                    <h3><i class="fa fa-clock-o"></i> {data.tx_mask_jokot2}</h3>
+                    <h3><i class="fa fa-clock-o"></i> {data.tx_mask_ftrrigtttle}</h3>
                     <div>
-                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_jokotxt2}</f:format.html>
+                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_footerbox3}</f:format.html>
                     </div>
-                    <f:link.typolink parameter="{data.tx_mask_jokolnk2}" class="btn btn-primary">
-                        <f:if condition="{data.tx_mask_jokolnk2title}">
-                            {data.tx_mask_jokolnk2title}
+                    <f:link.typolink parameter="{data.tx_mask_cntctlnktwo}" class="btn btn-primary">
+                        <f:if condition="{data.tx_mask_sebipntf}">
+                            {data.tx_mask_sebipntf}
                         </f:if>
                     </f:link.typolink>
                 </section>
@@ -410,24 +410,24 @@
 
         <div class="row joko_bg-dark-footer">
             <section>
-                <iframe src="{data.tx_mask_jokomap}" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                <iframe src="{data.tx_mask_gglmpurl}" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen=""></iframe>
             </section><!-- Mab End -->
 
             <section class="col-md-offset-1 col-md-10 joko_margin-top">
                 <span id="JOKO_copyrights">
-                    <f:if condition="{data.tx_mask_jokocr}">
-                        <f:format.nl2br>{data.tx_mask_jokocr}</f:format.nl2br>
+                    <f:if condition="{data.tx_mask_footercopyrighttext}">
+                        <f:format.nl2br>{data.tx_mask_footercopyrighttext}</f:format.nl2br>
                     </f:if>
                 </span>
                 <span class="pull-right">
-                    <f:if condition="{data.tx_mask_jokobtmlink1}">
-                        <f:link.typolink parameter="{data.tx_mask_jokobtmlink1}">{data.tx_mask_jokobtmlt1}</f:link.typolink>
+                    <f:if condition="{data.tx_mask_ftrimprntlnk}">
+                        <f:link.typolink parameter="{data.tx_mask_ftrimprntlnk}">{data.tx_mask_ftrimprntttl}</f:link.typolink>
                     </f:if>
-                    <f:if condition="{data.tx_mask_jokobtmlnk2}">
-                        <f:link.typolink parameter="{data.tx_mask_jokobtmlnk2}">{data.tx_mask_jokobtmlt2}</f:link.typolink>
+                    <f:if condition="{data.tx_mask_ftrprvcylnk}">
+                        <f:link.typolink parameter="{data.tx_mask_ftrprvcylnk}">{data.tx_mask_ftrprvcyttl}</f:link.typolink>
                     </f:if>
-                    <f:if condition="{data.tx_mask_jokobtmlnk3}">
-                        <f:link.typolink parameter="{data.tx_mask_jokobtmlnk3}">{data.tx_mask_jokobtmlt3}</f:link.typolink>
+                    <f:if condition="{data.tx_mask_ftrstmplnkt}">
+                        <f:link.typolink parameter="{data.tx_mask_ftrstmplnkt}">{data.tx_mask_ftrstmpttl}</f:link.typolink>
                     </f:if>
                 </span>
 
